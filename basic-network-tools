@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#installing
+
+pacotes="fping telnet tcpdump iftop iptraf traceroute nmap bind9utils dnsutils net-tools whois"
+for i in $pacotes; do
+  sudo apt-get install -y $i
+done
+
+#testing
+
+for i in $pacotes; do
+  apt -qq list $i
+done
